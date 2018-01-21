@@ -1,3 +1,3 @@
 # msp_winter
-not finish yet
-botframework + QnA Maker
+
+botframework + QnA Maker , not finish yet
