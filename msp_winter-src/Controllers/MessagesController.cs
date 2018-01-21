@@ -71,6 +71,22 @@ namespace Microsoft.Bot.Sample.QnABot
             await connector.Conversations.ReplyToActivityAsync(reply);
             
 
+                }
+                //三個按鈕
+                if (activity.Text == "按按鈕"){
+   
+                    reply.Text = "請選擇按鈕";
+                    reply.SuggestedActions = new SuggestedActions()
+                    {
+                        Actions = new List<CardAction>()
+                            {
+                                new CardAction(){Title="哈囉", Type=ActionTypes.ImBack, Value="哈囉"},
+                                new CardAction(){Title="哈哈", Type=ActionTypes.ImBack, Value="哈哈"},
+                                new CardAction(){Title="講一個笑話", Type=ActionTypes.ImBack, Value="講一個笑話"},
+                            }
+                    };
+                    await connector.Conversations.ReplyToActivityAsync(reply);
+                
                 }else{
                 
                     await Conversation.SendAsync(activity, () => new RootDialog());
