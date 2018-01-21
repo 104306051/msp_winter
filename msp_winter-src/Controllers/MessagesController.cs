@@ -61,6 +61,7 @@ namespace Microsoft.Bot.Sample.QnABot
                 Buttons = new List<CardAction>()
                 {
                     new CardAction(){Title = "哈囉！想問一些問題", Type= ActionTypes.ImBack, Value= "哈囉！想問一些問題" },
+                    new CardAction(){Title = "按按鈕", Type= ActionTypes.PostBack, Value= "按按鈕" },
                     new CardAction(){Title = "來 MSP 的網頁逛逛吧！", Type= ActionTypes.OpenUrl, Value= "https://www.microsoft.com/taiwan/msp/default.aspx" },
 
                 }
